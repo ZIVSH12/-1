@@ -1,25 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* רעש עדין לרקע – שים קובץ קטן בשם noise.png ב-public (לא חובה) */
+:root { color-scheme: dark; }
+body { background-color: #0b0b10; }
 
-/* אנימציה עדינה */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* מרקי לוגואים */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
-
-.animate-fadeIn {
-  animation: fadeIn 1s ease-in-out;
-}
-
-body {
-  direction: rtl;
-  font-family: "Heebo", sans-serif;
-  background-color: #f9f9f9;
-}
+.animate-marquee { animation: marquee 18s linear infinite; }
